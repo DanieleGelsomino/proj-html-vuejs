@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~@fontsource/abril-fatface/index.css";
+@import "~@fontsource/lato/index.css";
+@import "~@fontsource/lato/300.css";
+@import "~@fontsource/lato/700.css";
+@import "varstyles";
+
+body {
+  font-family: "lato", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "abril-fatface";
+}
