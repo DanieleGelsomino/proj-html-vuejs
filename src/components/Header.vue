@@ -19,7 +19,7 @@
           class="col-2 text-white d-flex align-items-center justify-content-end"
         >
           <i class="fa-solid fa-cart-shopping me-3 dg-cart"></i>
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars dg-menu"></i>
         </div>
       </div>
     </div>
@@ -35,8 +35,6 @@ export default {
 <style scoped lang="scss">
 @import "@/style/varstyles";
 .dg-bg-navbar {
-  //   background-image: url("../assets/img/avadabarbers-homepage-hero-bg.jpg");
-  //   background-size: cover;
   position: fixed;
   top: 0;
   left: 160px;
@@ -50,6 +48,11 @@ export default {
 
   .dg-cart {
     font-size: 0.6rem;
+  }
+
+  .dg-cart:hover,
+  .dg-menu:hover {
+    cursor: pointer;
   }
 }
 </style>

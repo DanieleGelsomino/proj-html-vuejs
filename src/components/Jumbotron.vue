@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center dg-bg">
     <div class="row justify-content-between align-items-center dg-w-70">
       <div class="col-6">
-        <h1 class="text-white title">Barber Shop</h1>
+        <h1 class="dg-title">Barber Shop</h1>
         <div class="dg-line"></div>
         <p class="dg-text pt-3">The Pinnacle of Male Grooming</p>
         <button class="dg-btn text-uppercase mt-2">learn more</button>
@@ -33,8 +33,9 @@ export default {
     width: $w-70;
   }
 
-  .title {
+  .dg-title {
     font-size: 3.2rem;
+    color: $silver;
   }
 
   .dg-line {
@@ -55,6 +56,9 @@ export default {
     font-size: 0.7rem;
     padding: 5px 18px;
     font-weight: $fw-700;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>
