@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <nav :class="{ onScroll: !view.topOfPage }">
     <div class="d-flex justify-content-center dg-bg-navbar">
       <div
         class="row justify-content-evenly align-items-center pt-3 dg-bg-navbar"
@@ -17,38 +17,72 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
 export default {
   name: "HeaderComponent",
+  data() {
+    return {
+      view: {
+        topOfPage: true,
+      },
+    };
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > 0) {
+        if (this.view.topOfPage) this.view.topOfPage = false;
+      } else {
+        if (!this.view.topOfPage) this.view.topOfPage = true;
+      }
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "@/style/varstyles";
-.dg-bg-navbar {
+
+nav {
   position: fixed;
-  top: 0;
   width: 100%;
+  height: 70px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
   z-index: 99999;
-
-  .dg-w-70 {
-    width: $w-70;
+  &.onScroll {
+    box-shadow: 0 0 5px #aaa;
+    background-color: #121413;
   }
 
-  .dg-head-logo {
-    width: 140px;
-  }
+  .dg-bg-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-  .dg-cart {
-    font-size: 0.6rem;
-  }
+    .dg-w-70 {
+      width: $w-70;
+    }
 
-  .dg-cart:hover,
-  .dg-menu:hover {
-    cursor: pointer;
+    .dg-head-logo {
+      width: 140px;
+    }
+
+    .dg-cart {
+      font-size: 0.6rem;
+    }
+
+    .dg-cart:hover,
+    .dg-menu:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>

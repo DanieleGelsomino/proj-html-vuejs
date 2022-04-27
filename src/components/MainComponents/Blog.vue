@@ -1,5 +1,5 @@
 <template>
-  <div class="dg-bg-blog pt-5">
+  <div class="dg-bg-blog pt-5 pb-5">
     <div class="d-flex flex-column align-items-center">
       <span class="text-uppercase">tales from the barber shop</span>
       <h2>Recent Blog Posts</h2>
@@ -15,7 +15,7 @@
         />
       </div>
     </div>
-    <div class="d-flex justify-content-center pt-3 pb-5">
+    <div class="d-flex justify-content-center pt-4 pb-5">
       <button class="dg-btn text-uppercase">read more from our blog</button>
     </div>
   </div>
