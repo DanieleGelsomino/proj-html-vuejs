@@ -54,10 +54,12 @@ export default {
     border: 2px solid $gold;
     color: $gold;
     font-size: 0.7rem;
-    padding: 5px 18px;
+    padding: 8px 20px;
     font-weight: $fw-700;
     &:hover {
       cursor: pointer;
+      color: #9b7748;
+      border-color: #9b7748;
     }
   }
 }

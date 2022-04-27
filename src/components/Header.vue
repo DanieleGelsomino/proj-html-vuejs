@@ -2,21 +2,15 @@
   <div class="">
     <div class="d-flex justify-content-center dg-bg-navbar">
       <div
-        class="
-          row
-          justify-content-between
-          align-items-center
-          pt-3
-          dg-w-70 dg-bg-navbar
-        "
+        class="row justify-content-evenly align-items-center pt-3 dg-bg-navbar"
       >
         <img
-          class="col-2 dg-head-logo"
+          class="col-5 dg-head-logo"
           src="@/assets/img/avadabarbers-stickylogo-x1.png"
           alt="logo-x1-avadabarbers"
         />
         <div
-          class="col-2 text-white d-flex align-items-center justify-content-end"
+          class="col-5 text-white d-flex align-items-center justify-content-end"
         >
           <i class="fa-solid fa-cart-shopping me-3 dg-cart"></i>
           <i class="fa-solid fa-bars dg-menu"></i>
@@ -37,7 +31,8 @@ export default {
 .dg-bg-navbar {
   position: fixed;
   top: 0;
-  left: 160px;
+  width: 100%;
+
   .dg-w-70 {
     width: $w-70;
   }
