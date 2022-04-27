@@ -45,8 +45,21 @@
     </svg>
     <!-- ****** Products section ****** -->
     <Products />
+
     <!-- ****** Reviews section ****** -->
     <Reviews />
+    <svg
+      class="fusion-big-triangle-candy dg-triangle-iverted"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="100%"
+      height="70"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      style="fill: #ffffff; padding: 0"
+    >
+      <path d="M0 100 L50 2 L100 100 Z"></path>
+    </svg>
   </div>
 </template>
 
@@ -105,5 +118,16 @@ export default {
 
 .dg-triangle-black {
   background-color: white;
+}
+
+.dg-triangle-iverted {
+  transform: rotate(180deg);
+  background-color: $light-silver;
+}
+
+.dg-banner {
+  background-color: #121413;
+  min-height: 300px;
+  position: absolute;
 }
 </style>

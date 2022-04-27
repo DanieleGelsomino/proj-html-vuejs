@@ -24,6 +24,7 @@ p {
   font-size: $fs-08;
   width: 60%;
   font-weight: $fw-300;
+  color: $gray;
 }
 
 img {

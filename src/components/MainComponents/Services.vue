@@ -82,6 +82,7 @@ p {
   font-size: $fs-08;
   width: 50%;
   font-weight: $fw-300;
+  color: $gray;
 }
 
 .dg-btn {

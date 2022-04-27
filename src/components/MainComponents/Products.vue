@@ -1,5 +1,5 @@
 <template>
-  <div class="dg-bg-products d-flex flex-column">
+  <div class="dg-bg-products d-flex flex-column pb-5">
     <div class="d-flex flex-column align-items-center pt-5">
       <span class="text-uppercase">we have you covered</span>
       <h2>Avada Grooming Products</h2>
