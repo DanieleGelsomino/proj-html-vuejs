@@ -82,6 +82,7 @@ nav {
     .dg-cart:hover,
     .dg-menu:hover {
       cursor: pointer;
+      color: $gold;
     }
   }
 }
