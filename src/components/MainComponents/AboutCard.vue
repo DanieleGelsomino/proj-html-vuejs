@@ -22,7 +22,7 @@ export default {
 
 p {
   font-size: $fs-08;
-  width: 60%;
+  width: 80%;
   font-weight: $fw-300;
   color: $gray;
 }

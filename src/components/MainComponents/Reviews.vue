@@ -37,14 +37,16 @@
         <span class="text-uppercase">what people say</span>
         <h2>Reviews</h2>
       </div>
-      <div class="d-flex justify-content-evenly text-center">
-        <AboutCard
-          v-for="(testimonial, index) in testimonials"
-          :key="index"
-          :reviews="testimonial.reviews"
-          :testimonial="testimonial.testimonial"
-          :profile="testimonial.profile"
-        />
+      <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-evenly text-center dg-w-70">
+          <AboutCard
+            v-for="(testimonial, index) in testimonials"
+            :key="index"
+            :reviews="testimonial.reviews"
+            :testimonial="testimonial.testimonial"
+            :profile="testimonial.profile"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -137,6 +139,10 @@ export default {
 }
 .dg-view-content {
   padding-top: 350px;
+
+  .dg-w-70 {
+    width: $w-70;
+  }
 
   span {
     color: $gold;

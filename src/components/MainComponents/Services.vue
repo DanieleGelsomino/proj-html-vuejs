@@ -94,8 +94,10 @@ p {
   font-weight: $fw-700;
   &:hover {
     cursor: pointer;
-    color: #9b7748;
-    border-color: #9b7748;
+    color: #fff;
+    background-color: $gold;
+    outline: 2px solid $gold;
+    outline-offset: 1px;
   }
 }
 </style>

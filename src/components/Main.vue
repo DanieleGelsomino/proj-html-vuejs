@@ -48,6 +48,7 @@
 
     <!-- ****** Reviews section ****** -->
     <Reviews />
+    <!-- ****** Inverted White Triangle ****** -->
     <svg
       class="fusion-big-triangle-candy dg-triangle-iverted"
       xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +61,8 @@
     >
       <path d="M0 100 L50 2 L100 100 Z"></path>
     </svg>
+    <!-- ****** Blog section ****** -->
+    <Blog />
   </div>
 </template>
 
@@ -67,12 +70,14 @@
 import Services from "@/components/MainComponents/Services.vue";
 import Products from "@/components/MainComponents/Products.vue";
 import Reviews from "@/components/MainComponents/Reviews.vue";
+import Blog from "@/components/MainComponents/Blog.vue";
 export default {
   name: "MainComponent",
   components: {
     Services,
     Products,
     Reviews,
+    Blog,
   },
 };
 </script>
