@@ -12,7 +12,6 @@
           :img="item.img"
           :product_name="item.product_name"
           :price="item.price"
-          class=""
         />
       </div>
       <div class="d-flex justify-content-center pt-3 pb-5">

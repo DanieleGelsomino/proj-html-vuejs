@@ -4,8 +4,8 @@
       <span class="text-uppercase">mens grooming</span>
       <h2>Services</h2>
     </div>
-    <div class="row justify-content-center pt-5 text-center">
-      <div class="col-3 d-flex flex-column align-items-center">
+    <div class="d-flex justify-content-center pt-5 text-center">
+      <div class="d-flex flex-column align-items-center">
         <img
           src="@/assets/img/avadabarbers-trimcut-icon-before.png"
           alt="trimcut-icon"
@@ -16,7 +16,7 @@
           Quick but careful and ridiculously good looking.
         </p>
       </div>
-      <div class="col-3 d-flex flex-column align-items-center">
+      <div class="d-flex flex-column align-items-center">
         <img
           src="@/assets/img/avadabarbers-washndry-icon.png"
           alt="washndry-icon"
@@ -27,7 +27,7 @@
           you a fresh head in a luxurious fashion
         </p>
       </div>
-      <div class="col-3 d-flex flex-column align-items-center">
+      <div class="d-flex flex-column align-items-center">
         <img
           src="@/assets/img/avadabarbers-beardtrim-icon.png"
           alt="washndry-icon"
@@ -38,10 +38,10 @@
           Beard Tidy services from Avada Barbers.
         </p>
       </div>
-      <div class="row justify-content-center pt-3 pb-5">
-        <div class="col-3">
-          <button class="dg-btn text-uppercase">Read about our services</button>
-        </div>
+    </div>
+    <div class="d-flex justify-content-center pt-3 pb-5">
+      <div>
+        <button class="dg-btn text-uppercase">Read about our services</button>
       </div>
     </div>
   </div>
@@ -68,8 +68,8 @@ h2 {
 }
 
 img {
-  width: 40px;
-  height: 60px;
+  width: 50px;
+  height: 80px;
   margin-bottom: 20px;
 }
 
@@ -80,7 +80,7 @@ h4 {
 
 p {
   font-size: $fs-08;
-  width: 90%;
+  width: 50%;
   font-weight: $fw-300;
 }
 
@@ -89,7 +89,7 @@ p {
   border: 2px solid $gold;
   color: $gold;
   font-size: 0.7rem;
-  padding: 8px 20px;
+  padding: 8px 18px;
   font-weight: $fw-700;
   &:hover {
     cursor: pointer;
