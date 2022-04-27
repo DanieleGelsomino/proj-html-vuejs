@@ -1,9 +1,7 @@
 <template>
   <nav :class="{ onScroll: !view.topOfPage }">
     <div class="d-flex justify-content-center dg-bg-navbar">
-      <div
-        class="row justify-content-evenly align-items-center pt-3 dg-bg-navbar"
-      >
+      <div class="row justify-content-evenly align-items-center dg-bg-navbar">
         <img
           class="col-2 dg-head-logo"
           src="@/assets/img/avadabarbers-stickylogo-x1.png"
@@ -80,7 +78,7 @@ export default {
 nav {
   position: fixed;
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: transparent;
   display: flex;
   align-items: center;

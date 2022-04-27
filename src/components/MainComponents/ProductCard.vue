@@ -22,6 +22,7 @@ export default {
 * {
   cursor: pointer;
   &:hover {
+    transition: transform 0.7s ease;
     transform: scale(1.1);
   }
 }

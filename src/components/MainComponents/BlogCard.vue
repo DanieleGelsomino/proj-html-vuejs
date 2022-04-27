@@ -1,6 +1,9 @@
 <template>
   <div class="d-flex flex-column align-items-center pt-4">
-    <img :src="require('@/assets/img/' + img + '')" alt="" />
+    <div class="img-hover-zoom">
+      <img :src="require('@/assets/img/' + img + '')" alt="" />
+    </div>
+
     <h4>{{ title }}</h4>
     <p>{{ text }}</p>
   </div>
@@ -20,8 +23,15 @@ export default {
 <style scoped lang="scss">
 @import "@/style/varstyles";
 
-img {
-  width: 220px;
+.img-hover-zoom {
+  overflow: hidden;
+  img {
+    width: 220px;
+    transition: transform 1.5s ease;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 }
 
 h4 {
