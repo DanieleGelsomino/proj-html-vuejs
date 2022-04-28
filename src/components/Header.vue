@@ -2,11 +2,13 @@
   <nav :class="{ onScroll: !view.topOfPage }">
     <div class="d-flex justify-content-center dg-bg-navbar">
       <div class="row justify-content-evenly align-items-center dg-bg-navbar">
+        <!-- ****** Logo img ****** -->
         <img
           class="col-2 dg-head-logo"
           src="@/assets/img/avadabarbers-stickylogo-x1.png"
           alt="logo-x1-avadabarbers"
         />
+        <!-- ****** Navbar whit hidden menu ****** -->
         <div
           class="col-5 text-white d-flex align-items-center justify-content-end"
         >
@@ -16,6 +18,7 @@
               <a href="#">{{ link }}</a>
             </li>
           </ul>
+          <!-- ****** Animated Button ****** -->
           <div @click="showMenuOptions">
             <button
               class="menu"

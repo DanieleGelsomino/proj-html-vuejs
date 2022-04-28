@@ -1,9 +1,11 @@
 <template>
   <div class="dg-bg-blog pt-5 pb-5">
+    <!-- ****** Title section ****** -->
     <div class="d-flex flex-column align-items-center">
       <span class="text-uppercase">tales from the barber shop</span>
       <h2>Recent Blog Posts</h2>
     </div>
+    <!-- ****** Blog Card with img and text ****** -->
     <div class="d-flex justify-content-center">
       <div class="d-flex dg-w-70">
         <BlogCard
@@ -15,6 +17,7 @@
         />
       </div>
     </div>
+    <!-- ****** Button with hidden text ****** -->
     <div
       class="
         d-flex

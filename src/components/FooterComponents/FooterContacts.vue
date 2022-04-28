@@ -1,4 +1,5 @@
 <template>
+  <!-- ****** Footer info contact ****** -->
   <div class="d-flex flex-column pt-4">
     <img class="dg-logo" src="@/assets/img/avadabarbers-logo-x1.png" alt="" />
     <div class="d-flex flex-column justify-content-center pt-4 pb-5">
@@ -9,6 +10,7 @@
         <li>info@yourwebsite.com</li>
         <li>+1(555)555-1212</li>
       </ul>
+      <!--****** Social icons ****** -->
       <div>
         <p class="text-uppercase text-center pt-4">follow us</p>
         <div class="d-flex justify-content-evenly text-white">

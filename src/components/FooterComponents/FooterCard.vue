@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- ****** Footer Card with image and button ****** -->
     <div class="d-flex flex-column">
       <img :src="require('@/assets/img/' + img + '')" alt="" />
 
