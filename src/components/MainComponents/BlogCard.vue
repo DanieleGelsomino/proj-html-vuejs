@@ -37,7 +37,7 @@ export default {
 h4 {
   color: $gold;
   font-weight: $fw-700;
-  width: 90%;
+  width: 80%;
   text-align: center;
   padding-top: 10px;
 }
