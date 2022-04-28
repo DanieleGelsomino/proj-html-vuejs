@@ -5,7 +5,15 @@
         <h1 class="dg-title">Barber Shop</h1>
         <div class="dg-line"></div>
         <p class="dg-text pt-3">The Pinnacle of Male Grooming</p>
-        <button class="dg-btn text-uppercase mt-2">learn more</button>
+        <button @click="showMoreText" class="dg-btn text-uppercase mt-2">
+          learn more
+        </button>
+        <p v-if="showMore" class="dg-text dg-w-80 pt-3 dg-transition">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+          recusandae. Numquam tempora facere reprehenderit odio dolore obcaecati
+          fugit temporibus neque, inventore possimus sed, nam earum quibusdam?
+          Nihil iste eum iure?
+        </p>
       </div>
       <div class="col-6 d-flex justify-content-end pt-5 pb-5">
         <img
@@ -20,6 +28,17 @@
 <script>
 export default {
   name: "JumbotronComponent",
+  data() {
+    return {
+      showMore: false,
+    };
+  },
+
+  methods: {
+    showMoreText() {
+      this.showMore = !this.showMore;
+    },
+  },
 };
 </script>
 
@@ -61,6 +80,14 @@ export default {
       color: #9b7748;
       border-color: #9b7748;
     }
+  }
+
+  .dg-w-80 {
+    width: $w-80;
+  }
+
+  .dg-transition {
+    transition: 1s;
   }
 }
 </style>

@@ -10,49 +10,19 @@
         pb-5
       "
     >
-      <div class="d-flex flex-column">
-        <img
-          src="@/assets/img/avadabarbers_footer_shop_image-300x234.png"
-          alt=""
-        />
-        <div class="d-flex justify-content-center pt-3 pb-5">
-          <button class="dg-btn text-uppercase">Shop our range now</button>
-        </div>
-      </div>
-      <div class="d-flex flex-column">
-        <img
-          class="dg-logo pb-3"
-          src="@/assets/img/avadabarbers-logo-x1.png"
-          alt=""
-        />
-        <div class="d-flex flex-column justify-content-center pt-3 pb-5">
-          <ul class="ps-0">
-            <li>Avada Barbers</li>
-            <li>123 New York Street</li>
-            <li>New York City</li>
-            <li>info@yourwebsite.com</li>
-            <li>+1(555)555-1212</li>
-          </ul>
-          <div>
-            <p class="text-uppercase text-center pt-3">follow us</p>
-            <div class="d-flex justify-content-evenly text-white">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex flex-column">
-        <img
-          src="@/assets/img/avadabarbers_footer_appointment_image-300x234.png"
-          alt=""
-        />
-        <div class="d-flex justify-content-center pt-3 pb-5">
-          <button class="dg-btn text-uppercase">book your appointment</button>
-        </div>
-      </div>
+      <FooterCard
+        v-for="(element, index) in buttonImg1"
+        :key="index.id"
+        :img="element.img"
+        :text_btn="element.text_btn"
+      />
+      <FooterContacts />
+      <FooterCard
+        v-for="(element, index) in buttonImg2"
+        :key="index.id"
+        :img="element.img"
+        :text_btn="element.text_btn"
+      />
     </div>
     <div class="copyright">
       <span>
@@ -64,8 +34,33 @@
 </template>
 
 <script>
+import FooterCard from "@/components/FooterComponents/FooterCard.vue";
+import FooterContacts from "@/components/FooterComponents/FooterContacts.vue";
 export default {
   name: "FooterComponent",
+  components: {
+    FooterCard,
+    FooterContacts,
+  },
+  data() {
+    return {
+      buttonImg1: [
+        {
+          id: 1,
+          img: "avadabarbers_footer_shop_image-300x234.png",
+          text_btn: "shop our range now",
+        },
+      ],
+
+      buttonImg2: [
+        {
+          id: 2,
+          img: "avadabarbers_footer_appointment_image-300x234.png",
+          text_btn: "book your appointment",
+        },
+      ],
+    };
+  },
 };
 </script>
 

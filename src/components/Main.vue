@@ -71,8 +71,10 @@ import Services from "@/components/MainComponents/Services.vue";
 import Products from "@/components/MainComponents/Products.vue";
 import Reviews from "@/components/MainComponents/Reviews.vue";
 import Blog from "@/components/MainComponents/Blog.vue";
+
 export default {
   name: "MainComponent",
+
   components: {
     Services,
     Products,
