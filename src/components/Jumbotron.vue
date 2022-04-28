@@ -8,7 +8,7 @@
         <button @click="showMoreText" class="dg-btn text-uppercase mt-2">
           learn more
         </button>
-        <p v-if="showMore" class="dg-text dg-w-80 pt-3 dg-transition">
+        <p v-if="showMore" class="dg-text dg-w-80 pt-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
           recusandae. Numquam tempora facere reprehenderit odio dolore obcaecati
           fugit temporibus neque, inventore possimus sed, nam earum quibusdam?
@@ -84,10 +84,6 @@ export default {
 
   .dg-w-80 {
     width: $w-80;
-  }
-
-  .dg-transition {
-    transition: 1s;
   }
 }
 </style>

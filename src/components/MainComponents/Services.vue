@@ -39,10 +39,32 @@
         </p>
       </div>
     </div>
-    <div class="d-flex justify-content-center pt-3 pb-5">
+    <div
+      class="
+        d-flex
+        flex-column
+        align-items-center
+        justify-content-center
+        pt-3
+        pb-5
+      "
+    >
       <div>
-        <button class="dg-btn text-uppercase">Read about our services</button>
+        <button @click="showMoreText" class="dg-btn text-uppercase">
+          Read about our services
+        </button>
       </div>
+      <p v-if="showMore" class="pt-4 text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quisquam
+        sequi dolorem nulla? Corporis accusantium dolor repudiandae nesciunt rem
+        ipsam voluptate, exercitationem temporibus ratione libero nostrum
+        maiores hic cumque veritatis cupiditate, magnam officia, obcaecati
+        distinctio sapiente quasi numquam illo dolorem est voluptatum. Deleniti
+        nesciunt, harum repudiandae numquam, nulla ab cum laudantium aspernatur
+        sint enim quibusdam alias dolore voluptatibus placeat tempore mollitia
+        animi sequi corrupti quia ea, sit repellat fugit quos aut. Voluptatibus,
+        itaque a. Eaque nisi doloremque vero error a.
+      </p>
     </div>
   </div>
 </template>
@@ -50,6 +72,16 @@
 <script>
 export default {
   name: "ServicesComponent",
+  data() {
+    return {
+      showMore: false,
+    };
+  },
+  methods: {
+    showMoreText() {
+      this.showMore = !this.showMore;
+    },
+  },
 };
 </script>
 

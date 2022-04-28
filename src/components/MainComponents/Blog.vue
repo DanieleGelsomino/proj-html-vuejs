@@ -15,8 +15,38 @@
         />
       </div>
     </div>
-    <div class="d-flex justify-content-center pt-4 pb-5">
-      <button class="dg-btn text-uppercase">read more from our blog</button>
+    <div
+      class="
+        d-flex
+        flex-column
+        align-items-center
+        justify-content-center
+        pt-4
+        pb-5
+      "
+    >
+      <button @click="showMoreText" class="dg-btn text-uppercase">
+        read more from our blog
+      </button>
+      <p v-if="showMore" class="pt-4 text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum
+        cupiditate delectus fugit iure qui cum dolor velit repellat
+        exercitationem? Sunt odit iste autem repellat ea laboriosam, dolor harum
+        deleniti! Non saepe neque natus veritatis, eum architecto nostrum quas
+        sit ea officia reiciendis, voluptatem exercitationem amet aut, dicta
+        quam placeat eius. Facilis quos ut numquam perspiciatis id rerum, hic
+        adipisci magnam earum est perferendis qui molestiae natus quis veniam
+        provident debitis dolorem? Dolor fuga, vero ad mollitia voluptatibus
+        nihil consequatur eaque ab id reprehenderit incidunt velit consectetur
+        nisi obcaecati atque vitae ipsum, cumque et sint, natus illo! Eos
+        perspiciatis eligendi voluptatum, aut corporis iure architecto
+        doloribus, saepe iusto optio, cupiditate expedita ex sint numquam
+        obcaecati enim temporibus sunt dicta sed. Voluptatum delectus eum minus
+        temporibus tenetur, quasi voluptatibus reprehenderit fuga praesentium
+        consequuntur. Enim rerum tenetur aliquam voluptatem itaque cum fuga
+        doloremque iusto ducimus suscipit culpa molestiae, similique praesentium
+        beatae voluptas!
+      </p>
     </div>
   </div>
 </template>
@@ -48,7 +78,14 @@ export default {
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. praesent semper.",
         },
       ],
+
+      showMore: false,
     };
+  },
+  methods: {
+    showMoreText() {
+      this.showMore = !this.showMore;
+    },
   },
 };
 </script>
@@ -89,5 +126,13 @@ h2 {
     outline: 2px solid $gold;
     outline-offset: 1px;
   }
+}
+
+p {
+  font-size: $fs-08;
+  width: $w-70;
+  text-align: center;
+  font-weight: $fw-300;
+  color: $gray;
 }
 </style>

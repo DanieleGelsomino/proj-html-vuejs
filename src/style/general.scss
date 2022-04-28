@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
-@import "~@fontsource/abril-fatface/index.css";
+@import "~@fontsource/playfair-display/index.css";
+@import "~@fontsource/playfair-display/900.css";
+@import "~@fontsource/playfair-display/800.css";
 @import "~@fontsource/lato/index.css";
 @import "~@fontsource/lato/300.css";
 @import "~@fontsource/lato/700.css";
@@ -15,9 +17,24 @@ body {
   font-family: "lato", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: $fs-07;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  outline: 1px solid rgba(111, 104, 104, 0.3);
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-family: "abril-fatface";
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
 }

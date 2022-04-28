@@ -113,7 +113,7 @@ export default {
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: $silver;
   }
 
