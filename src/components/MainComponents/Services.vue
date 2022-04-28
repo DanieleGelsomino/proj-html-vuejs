@@ -4,40 +4,15 @@
       <span class="text-uppercase">mens grooming</span>
       <h2>Services</h2>
     </div>
+    <!-- ****** Services Card component ****** -->
     <div class="d-flex justify-content-center pt-5 text-center">
-      <div class="d-flex flex-column align-items-center">
-        <img
-          src="@/assets/img/avadabarbers-trimcut-icon-before.png"
-          alt="trimcut-icon"
-        />
-        <h4>Trim & cut</h4>
-        <p>
-          Avada Barbers are experts in the lickety split trim and hair aut.
-          Quick but careful and ridiculously good looking.
-        </p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img
-          src="@/assets/img/avadabarbers-washndry-icon.png"
-          alt="washndry-icon"
-        />
-        <h4>Wash & Dry</h4>
-        <p>
-          Take a seat in our fine leather chairs. lean back and let us lather
-          you a fresh head in a luxurious fashion
-        </p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img
-          src="@/assets/img/avadabarbers-beardtrim-icon.png"
-          alt="washndry-icon"
-        />
-        <h4>Beard Tidy</h4>
-        <p>
-          Tame the tangles and untidy facial hairs like a gentleman with our
-          Beard Tidy services from Avada Barbers.
-        </p>
-      </div>
+      <ServicesCard
+        v-for="(service, index) in services"
+        :key="index"
+        :img="service.img"
+        :title="service.title"
+        :text="service.text"
+      />
     </div>
     <!-- ****** Button with hidden text ****** -->
     <div
@@ -71,11 +46,33 @@
 </template>
 
 <script>
+import ServicesCard from "@/components/MainComponents/ServicesCard.vue";
+
 export default {
   name: "ServicesComponent",
+  components: {
+    ServicesCard,
+  },
   data() {
     return {
       showMore: false,
+      services: [
+        {
+          img: "avadabarbers-trimcut-icon-before.png",
+          title: "Trim & Cut",
+          text: " Avada Barbers are experts in the lickety split trim and hair aut. Quick but careful and ridiculously good looking.",
+        },
+        {
+          img: "avadabarbers-washndry-icon.png",
+          title: "Wash & Dry",
+          text: " Take a seat in our fine leather chairs. lean back and let us lather you a fresh head in a luxurious fashion",
+        },
+        {
+          img: "avadabarbers-beardtrim-icon.png",
+          title: "Beard Tidy",
+          text: "Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.",
+        },
+      ],
     };
   },
   methods: {
@@ -100,24 +97,6 @@ h2 {
   color: $silver;
 }
 
-img {
-  width: 50px;
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-h4 {
-  color: $gold;
-  font-weight: $fw-700;
-}
-
-p {
-  font-size: $fs-08;
-  width: 50%;
-  font-weight: $fw-300;
-  color: $gray;
-}
-
 .dg-btn {
   background-color: transparent;
   border: 2px solid $gold;
@@ -132,5 +111,11 @@ p {
     outline: 2px solid $gold;
     outline-offset: 1px;
   }
+}
+p {
+  font-size: $fs-08;
+  width: 50%;
+  font-weight: $fw-300;
+  color: $gray;
 }
 </style>
