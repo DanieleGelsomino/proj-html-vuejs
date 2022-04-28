@@ -13,7 +13,29 @@
     >
       <span class="dg-little-title text-uppercase">Award winning</span>
       <h2 class="dg-title">Pro Barbers</h2>
-      <button class="dg-btn text-uppercase mt-2">Meet your new barber</button>
+      <button @click="showMoreText" class="dg-btn text-uppercase mt-2">
+        Meet your new barber
+      </button>
+      <div
+        v-if="showMore"
+        class="d-flex justify-content-center align-items-center pt-5"
+      >
+        <p class="pt-3">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+          exercitationem quas nesciunt, reiciendis dicta praesentium eum laborum
+          perspiciatis sit, quaerat numquam sed id enim earum alias? Corporis,
+          repellendus nam quasi perferendis nihil necessitatibus animi molestiae
+          impedit aperiam ut natus similique praesentium ipsam eveniet dolorum
+          dolore dignissimos? Eaque repellendus esse optio officia autem
+          delectus, deleniti atque ducimus. Amet commodi distinctio facere.
+        </p>
+        <div class="img-hover-zoom">
+          <img
+            src="@/assets/img/avadabarbers-ourservice-blog-320x202.jpg"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
     <!-- ****** White triangle svg ****** -->
     <svg
@@ -81,6 +103,18 @@ export default {
     Reviews,
     Blog,
   },
+
+  data() {
+    return {
+      showMore: false,
+    };
+  },
+
+  methods: {
+    showMoreText() {
+      this.showMore = !this.showMore;
+    },
+  },
 };
 </script>
 
@@ -136,5 +170,26 @@ export default {
   background-color: #121413;
   min-height: 300px;
   position: absolute;
+}
+
+p {
+  width: 30%;
+  color: #fff;
+  font-weight: $fw-300;
+}
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+img {
+  width: 400px;
+  height: 250px;
+  margin-left: 50px;
+  border-radius: 20px;
+  transition: transform 1.5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 </style>

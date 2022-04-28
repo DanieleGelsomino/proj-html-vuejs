@@ -5,6 +5,7 @@
         <h1 class="dg-title">Barber Shop</h1>
         <div class="dg-line"></div>
         <p class="dg-text pt-3">The Pinnacle of Male Grooming</p>
+        <!-- ****** Button with hidden text ****** -->
         <button @click="showMoreText" class="dg-btn text-uppercase mt-2">
           learn more
         </button>
@@ -20,16 +21,6 @@
           src="@/assets/img/avadabarbers_hero_focalmirror-400x550.png"
           alt="avadabarbers_hero_focalmirror"
         />
-      </div>
-    </div>
-    <div class="little-ban text-center">
-      <div class="dg-demos d-flex flex-column justify-content-center">
-        <i class="fa-regular fa-folder-open"></i>
-        <span>Demos</span>
-      </div>
-      <div class="dg-sales mt-2 d-flex flex-column justify-content-center">
-        <span class="dg-price"><span>$</span>39</span>
-        <span class="">On Sale</span>
       </div>
     </div>
   </div>
@@ -98,34 +89,6 @@ export default {
 
   p {
     transition-delay: 2s;
-  }
-  .little-ban {
-    position: absolute;
-    top: 100px;
-    right: 10px;
-
-    .dg-demos,
-    .dg-sales {
-      width: 40px;
-      height: 40px;
-      background-color: $light-silver;
-      border-radius: 5px;
-      color: #4b4747;
-      &:hover {
-        cursor: pointer;
-      }
-      span {
-        font-size: $fs-06;
-        font-weight: bold;
-      }
-
-      .dg-price {
-        font-size: 1rem;
-        color: green;
-        display: flex;
-        justify-content: center;
-      }
-    }
   }
 }
 </style>
